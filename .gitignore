@@ -12,3 +12,4 @@ Scripts/*
 *.bat
 *.log
 *.pwd
+.DS_Store
