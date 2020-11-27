@@ -7,10 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./css/basic.css?v=123" />
     <title>Hello, world!</title>
   </head>
   <body>
+    <script type="text/javascript">
+      function switchPage(page){
+      $('.nav-item').removeClass('active');
+      $('.pageModel').addClass('d-none');
+      $('.'+page).removeClass('d-none');
+    }
+  $(function () {
+  });
+    </script>
     <h1>Hello, world!</h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -22,41 +31,106 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-t6I8D5dJmMXjCsRLhSzCltuhNZg6P10kE0m0nAncLUjH6GeYLhRU1zfLoW3QNQDF" crossorigin="anonymous"></script>
     -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark position-fixed fixed-top">
+  <a class="navbar-brand" href="index.htm" title="海龜資訊兩岸期指程式交易入口網"><img src="images/turtleLogo.svg" height="50"/></a>
+  <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" onclick="switchPage('p1');$(this).addClass('active')"><a class="nav-link" href="#">海龜策略精靈v.s.下單機之比較 <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item" onclick="switchPage('p2');$(this).addClass('active')"><a class="nav-link" href="#">策略精靈使用注意事項</a></li>
+      <li class="nav-item" onclick="switchPage('p3');$(this).addClass('active')"><a class="nav-link" href="#">策略精靈風險預告書</a></li>
+      <li class="nav-item" onclick="switchPage('p5');$(this).addClass('active')"><a class="nav-link" href="#">策略精靈下載</a></li>
+      <li class="nav-item" onclick="switchPage('p6');$(this).addClass('active')"><a class="nav-link" href="#">策略精靈使用說明</a></li>
+    </ul>
   </div>
 </nav>
+<div class="container">
+
+<div class="pageModel p0">
+  <div class="jumbotron bg-warning">
+  <h1 class="display-5"><img src="images/turtleLogo.svg" height="50"/>海龜資訊兩岸期指程式交易入口網</h1>
+  <p class="lead text-right text-dark">期貨是零和的市場。</p>
+  <hr class="my-4">
+  <p class="text-dark">策略精靈 直接讀取奇狐指標之倉位變數，再經由期貨商所提供之中介面，傳送期貨商之下單主機，速度最快…</p>
+  <a class="btn btn-danger btn-lg" href="#" role="button" onclick="switchPage('p1');$('.navbar-nav li:first-child').addClass('active')">更多詳情...</a>
+  </div>
+</div>
+
+<div class="pageModel p1">
+<h3 id="title1" class="text-danger p-2"><img src="images/turtleIcon.svg" height="35" class="m-0 p-0"/> 策略精靈v.s.下單機之比較</h3>
+<p class="text-center">
+<img src="./download/vsInfo.jpg" class="rounded" />
+</p>
+</div>
+<div class="pageModel p2">
+<h3 id="title2" class="text-danger p-2"><img src="images/turtleIcon.svg" height="35" class="m-0 p-0"/> 海龜策略精靈使用注意事項</h3>
+
+注意事項
+<ol>
+<li>本公司(海龜資訊有限公司)所提供之策略精靈，僅能於「奇狐勝券v5.1 Beta」以上之版本才能執行使用。</li>
+<li>使用策略精靈前，請先於相關整合之期貨商開戶並申請串接介面之開通。</li>
+<li>「海龜資訊策略精靈風險預告書」中，針對執行策略精靈有可能產生之風險有部分陳述及因應之道，請務必詳細閱讀之；並請至「下載專區」下載「海龜資訊策略精靈風險預告書」，填寫奇狐之帳號及簽名並回傳，俾使啟用策略精靈之串接。</li>
+<li>部分防毒軟體會阻擋策略精靈之執行，使用前建議先將防毒軟體關閉。</li>
+<li>策略精靈之訊號讀取介面僅有一套，如有不同之交易策略同時執行時，建議將策略先進行整合，否則，當不同的策略同時觸發訊號時，策略精靈僅能讀取其中一個訊號，造成持倉口數與策略精靈不同，執行動作會因此而混亂。</li>
+<li>使用策略精靈時，強烈建議須開啟下單期貨商所提供之下單介面，以因應突發狀況，並查詢下單是否正確。</li>
+<li>因各家期貨商對收盤後所下之預約單有不同之處理方式，強烈建議，請勿在收盤後執行策略精靈進行下單動作。</li>
+<li>因各家期貨商對當沖交易最後平倉時間略有不同，已向期貨商申請「當沖」之交易模式者，請注意交易策略最後的平倉時間。</li>
+<!--<li>如使用者於執行策略精靈發現任何問題，可至本網站之「問題回報」中提出，本公司會盡速加以處理。</li>-->
+</ol>
+</div>
+<div class="pageModel p3">
+<h3 id="title3" class="text-danger p-2"><img src="images/turtleIcon.svg" height="35" class="m-0 p-0"/> 海龜資訊策略精靈風險預告書</h3>
+
+<p>一、本公司(海龜資訊有限公司)所提供之「策略精靈」為免費之串接介面，本公司得在不經預告之情況下，隨時終止本介面之所有服務；如有任何重製、反向編譯或銷售…等等之侵權行為，本公司保留法律追訴權。</p>
+<p>二、使用者須充分了解，期貨公司所提供之帳號密碼及所申請之電子憑證，為本介面串接期貨商電子下單交易方式對使用者下單之認證，視為使用者親自下單；若因外洩致帳戶遭人冒用，無論使用者是否知情，其因此所生之一切責任，概由使用者自行負責；已成交部份，應負結算交割義務。</p>
+<p>三、使用「策略精靈」前，建議將電腦中之防毒軟體或非必要之電腦程式關閉，任何軟體或程式皆有可能干擾本介面之正常運作，此風險請使用者自行評估。</p>
+<p>四、使用者須詳細認知在使用此介面可能面對以下風險：如斷線、斷電、網路壅塞或其它之因素等造成傳輸之阻礙，致使訊號無法傳送或接收或時間延遲；及策略設計或其它因素所造成之訊號錯亂或錯誤或無法預期之各種情況，其所造成之損失，本公司(海龜資訊有限公司)不負任何責任。</p>
+<p>五、使用者須注意，本介面所提供之「限價下單」與「市價下單」，其中「買」與「賣」之按鈕，按下後即傳送訊號，不會再行詢問是否傳送訊號；如怕誤觸而導致誤傳訊號，請於進入本介面後先將數量改為「0」。</p>
+<p>六、本介面所提供之「當沖」選項，係指事先至期貨商申請之「當沖」模式，本介面不會自行平倉；未至期貨商申請通過之前，請勿使用此選項，否則有可能導致訊號錯亂或其它因素致使無法傳送訊號。</p>
+<p>七、本介面所提供之「策略觸發」，其訊號皆以「市價」為下單模式，如遇快市或其它不可預期之因素，可能導致成交價格大幅滑價的情況，其中風險所衍生之損失，使用者必須自行承擔。</p>
+<p>八、使用「策略觸發」程式之前，使用者須先確認目前所持有之倉位是否與「策略觸發」中「策略倉位」相同，如相同才可「啟用」，否則會造成傳送之訊號與欲交易之策略產生誤差。</p>
+<p>九、使用者須注意，「策略觸發」之程式執行時，請勿任意移動K線圖中之K線或變換畫面或變換商品，此舉會使得策略錯亂，導致傳送錯誤訊號；如要移動或變換之前，請先將「策略觸發」之程式「終止」。</p>
+<p>十、本介面之所有回報與刪單與期貨商如有不同時，以期貨商之交易紀錄為準。</p>
+<p>十一、本份風險預告書之預告事項甚為簡要，對所有期貨交易及使用此介面之風險無法一一詳述，請使用者審慎評估使用與否，無論發生任何情況所造成之損失，本公司(海龜資訊有限公司)無須負擔任何責任，且使用者願意放棄所有法律追訴權。</p>  
+<p class="text-center pb-5">
+<a href="./download/策略精靈風險預告書.doc" title="策略精靈風險預告書下載" class="btn btn-danger text-white">策略精靈風險預告書 下載</a>
+</p>
+</div>
+
+<div class="pageModel p5">
+<h3 id="title5" class="text-danger p-2"><img src="images/turtleIcon.svg" height="35" class="m-0 p-0"/> 海龜策略精靈下載</h3>
+
+<p>海龜資訊策略精靈風險預告書</p>
+
+<p>一、本公司(海龜資訊有限公司)所提供之「策略精靈」為免費之串接介面，本公司得在不經預告之情況下，隨時終止本介面之所有服務；如有任何重製、反向編譯或銷售…等等之侵權行為，本公司保留法律追訴權。</p>
+<p>二、使用者須充分了解，期貨公司所提供之帳號密碼及所申請之電子憑證，為本介面串接期貨商電子下單交易方式對使用者下單之認證，視為使用者親自下單；若因外洩致帳戶遭人冒用，無論使用者是否知情，其因此所生之一切責任，概由使用者自行負責；已成交部份，應負結算交割義務。</p>
+<p>三、使用「策略精靈」前，建議將電腦中之防毒軟體或非必要之電腦程式關閉，任何軟體或程式皆有可能干擾本介面之正常運作，此風險請使用者自行評估。</p>
+<p>四、使用者須詳細認知在使用此介面可能面對以下風險：如斷線、斷電、網路壅塞或其它之因素等造成傳輸之阻礙，致使訊號無法傳送或接收或時間延遲；及策略設計或其它因素所造成之訊號錯亂或錯誤或無法預期之各種情況，其所造成之損失，本公司(海龜資訊有限公司)不負任何責任。</p>
+<p>五、使用者須注意，本介面所提供之「限價下單」與「市價下單」，其中「買」與「賣」之按鈕，按下後即傳送訊號，不會再行詢問是否傳送訊號；如怕誤觸而導致誤傳訊號，請於進入本介面後先將數量改為「0」。</p>
+<p>六、本介面所提供之「當沖」選項，係指事先至期貨商申請之「當沖」模式，本介面不會自行平倉；未至期貨商申請通過之前，請勿使用此選項，否則有可能導致訊號錯亂或其它因素致使無法傳送訊號。</p>
+<p>七、本介面所提供之「策略觸發」，其訊號皆以「市價」為下單模式，如遇快市或其它不可預期之因素，可能導致成交價格大幅滑價的情況，其中風險所衍生之損失，使用者必須自行承擔。</p>
+<p>八、使用「策略觸發」程式之前，使用者須先確認目前所持有之倉位是否與「策略觸發」中「策略倉位」相同，如相同才可「啟用」，否則會造成傳送之訊號與欲交易之策略產生誤差。</p>
+<p>九、使用者須注意，「策略觸發」之程式執行時，請勿任意移動K線圖中之K線或變換畫面或變換商品，此舉會使得策略錯亂，導致傳送錯誤訊號；如要移動或變換之前，請先將「策略觸發」之程式「終止」。</p>
+<p>十、本介面之所有回報與刪單與期貨商如有不同時，以期貨商之交易紀錄為準。</p>
+<p>十一、本份風險預告書之預告事項甚為簡要，對所有期貨交易及使用此介面之風險無法一一詳述，請使用者審慎評估使用與否，無論發生任何情況所造成之損失，本公司(海龜資訊有限公司)無須負擔任何責任，且使用者願意放棄所有法律追訴權。</p>
+
+<p class="text-center  pb-5">
+<a href="./download/策略精靈_Setup_20140409.zip" title="海龜策略精靈下載" class="btn btn-danger">海龜策略精靈 下載</a>
+</p>
+</div>
+
+<div class="pageModel p6">
+<h3 id="title6" class="text-danger p-2"><img src="images/turtleIcon.svg" height="35" class="m-0 p-0"/> 策略精靈使用說明</h3>
+
+<p class="text-center">
+<img src="./download/wizardReadme.jpg" class="rounded" />
+</p>
+
+</div>
+
+</div>
   </body>
 </html>

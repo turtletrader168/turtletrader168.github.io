@@ -1,0 +1,72 @@
+*,html{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body {
+	overflow-x:hidden;
+	min-height: 100vh;
+	font-family:  'Noto Sans TC', sans-serif;, serif;
+	background:#FCFAB6;
+
+}
+
+.navbar-nav li{font-size:0.8rem !important;}
+.navbar-nav li a:link,.navbar-nav li a:visited{color:#FFC !important;}
+.navbar-nav li a:hover,.navbar-nav li a:active{color:#FF0 !important;}
+.navbar-nav li.active{border:solid 2px #FF0;border-radius:5px;}
+
+.pageModel{
+	/*background:#00F;*/
+	padding-top:5rem;
+}
+
+.pageModel-bg-white{
+	background:#fff;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 1px;height:1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #930909; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FF692E; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FFCF9F; 
+}
+
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 990px) {
+
+
+}
+
+@media (max-width: 800px) {
+
+}
+@media (max-width: 770px) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+
+@media (max-width: 580px){
+
+}
